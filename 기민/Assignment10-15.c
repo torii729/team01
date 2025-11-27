@@ -21,8 +21,8 @@ typedef struct
 // 함수 프로토타입 선언
 void test(void);
 void swap_point(POINT* a, POINT* b);
-void selection_sort_by_x(POINT arr[], int n);
-void print_points(const POINT arr[], int n);
+void selection_sort(POINT arr[], int n);
+void print_points(POINT arr[], int n);
 
 /*
     기능명: main. 프로그램 시작점
@@ -57,7 +57,7 @@ void test(void)
     printf("<정렬 전>\n");
     print_points(arr, 10); // 정렬 전 배열 출력
 
-    selection_sort_by_x(arr, 10); // x좌표 기준 선택 정렬 수행
+    selection_sort(arr, 10); // x좌표 기준 선택 정렬 수행
 
     printf("<정렬 후>\n");
     print_points(arr, 10); // 정렬 후 배열 출력
@@ -81,7 +81,7 @@ void swap_point(POINT* a, POINT* b)
 }
 
 /*
-    기능명: selection_sort_by_x. 선택 정렬
+    기능명: selection_sort. 선택 정렬
     내용: x좌표 오름차순 기준으로 POINT 배열을 선택 정렬한다.
           선택 정렬은 매 회전마다 남은 구간에서 최소값의 인덱스를 찾아
           현재 위치의 원소와 교환하는 방식이다.
@@ -90,7 +90,7 @@ void swap_point(POINT* a, POINT* b)
     출력: 없음 (배열 arr의 내용이 정렬된 상태로 바뀐다)
     오류: 없음
 */
-void selection_sort_by_x(POINT arr[], int n)
+void selection_sort(POINT arr[], int n)
 {
     int i;
     int j;
@@ -127,7 +127,7 @@ void selection_sort_by_x(POINT arr[], int n)
     출력: 좌표들을 "(x, y) " 형식으로 출력한 뒤 개행 출력
     오류: 없음
 */
-void print_points(const POINT arr[], int n)
+void print_points(POINT arr[], int n)
 {
     int i;
 
