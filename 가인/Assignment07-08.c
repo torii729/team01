@@ -11,35 +11,35 @@
           가격:  50000 --> 할인가:  40000
           가격:   5600 --> 할인가:   4480
 */
-#define _CRT_SECURE_NO_WARNINGS   // scanf 보안 경고를 무시하기 위한 매크로
-#include <stdio.h>                // 표준 입출력 함수 사용
-#define ARR_SIZE 5                // 배열 크기를 상수로 정의 (상품 5개)
+#define _CRT_SECURE_NO_WARNINGS // scanf 보안 경고를 무시하기 위한 매크로
+#include <stdio.h> // 표준 입출력 함수 사용
+#define ARR_SIZE 5 // 배열 크기를 상수로 정의 (상품 5개)
 
 // 함수 선언 (메인 함수보다 아래에 정의되어 있으므로 미리 선언)
 void product_dis();
 
 int main(void)
 {
-    product_dis();                // 가격 입력 및 할인 적용 기능 실행
-    return 0;                     // 프로그램 정상 종료
+    product_dis(); // 가격 입력 및 할인 적용 기능 실행
+    return 0; // 프로그램 정상 종료
 }
 
 void product_dis()
 {
-    int i, discount_rate;         // 반복문 변수 i, 할인율 변수 선언
-    int arr[ARR_SIZE];            // 원래 상품가 저장 배열
-    int arr_dis[ARR_SIZE];        // 할인된 가격 저장 배열
+    int i, discount_rate; // 반복문 변수 i, 할인율 변수 선언
+    int arr[ARR_SIZE]; // 원래 상품가 저장 배열
+    int arr_dis[ARR_SIZE]; // 할인된 가격 저장 배열
 
     printf("상품가 5개를 입력하세요:\n");
 
     // 상품 가격 5개 입력 받기
     for (i = 0; i < ARR_SIZE; i++)
     {
-        scanf("%d", &arr[i]);     // 사용자로부터 상품 가격 입력받아 arr 배열에 저장
+        scanf("%d", &arr[i]); // 사용자로부터 상품 가격 입력받아 arr 배열에 저장
     }
 
-    printf("할인율(%%)? ");       // %%는 % 한 개를 출력하기 위한 escape
-    scanf("%d", &discount_rate);  // 할인율 입력받기 (예: 20 → 20%)
+    printf("할인율(%%)? "); // %%는 % 한 개를 출력하기 위한 escape
+    scanf("%d", &discount_rate); // 할인율 입력받기 (예: 20 → 20%)
 
     // 입력된 할인율을 이용해 할인된 가격 계산
     // arr[i] / 100 * (100 - discount_rate)

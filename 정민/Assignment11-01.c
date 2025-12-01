@@ -1,7 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int count_digits(int n) {
+int count_digits(int n) 
+{
     int count = 0;
 
     if (n == 0)
@@ -12,10 +13,12 @@ int count_digits(int n) {
         n /= 10;
         count++;
     }
+
     return count;
 }
 
-int main(void) {
+int main(void)
+{
     int n;
 
     printf("Á¤¼ö? ");

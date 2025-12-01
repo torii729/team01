@@ -1,8 +1,10 @@
 #include <stdio.h>
+// 점화식이란 앞에 항들을 이용해서 다음 항을 만들어가는 식
 
 // 이 함수는 1, 3, 5, 7처럼
 // 앞의 수에 2를 더해서 만드는 수를 출력해요
-void print_arithmetic_sequence_recursive(int n) {
+void print_arithmetic_sequence_recursive(int n)
+{
     printf("점화식\n");
     int current_term = 1; // 처음 수는 1
 
@@ -22,7 +24,8 @@ void print_arithmetic_sequence_recursive(int n) {
 }
 
 // 1, 3, 5처럼 바로 계산해서 출력해요
-void print_arithmetic_sequence_general(int n) {
+void print_arithmetic_sequence_general(int n) 
+{
     printf("일반항\n");
     int term;
 
@@ -40,14 +43,16 @@ void print_arithmetic_sequence_general(int n) {
     printf("\n");
 }
 
-int main(void) {
+int main(void)
+{
     int num_of_terms;
 
     printf("출력 항의 개수 입력 후 Enter>");//몇개으 숫자를 출력 받을지 입력받음
 
 
     // 숫자를 제대로 입력했는지 확인하고 아니면 오류 메세지 출력함.
-    if (scanf_s("%d", &num_of_terms) != 1) {
+    if (scanf_s("%d", &num_of_terms) != 1) 
+    {
         printf("잘못된 입력입니다.\n");
         return 1; // 프로그램 끝내기
     }
