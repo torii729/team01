@@ -1,3 +1,5 @@
+// 사용자가 입력한 정수의 개수를 세는 프로그램
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 

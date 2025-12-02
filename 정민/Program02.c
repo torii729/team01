@@ -1,3 +1,5 @@
+// 등비수열, 점화식 방식과 일반항 방식, 두 가지로 출력해서 비교
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
