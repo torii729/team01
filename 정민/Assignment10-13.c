@@ -1,5 +1,3 @@
-// 구조체를 이용한 좌하단점 우상단점 입력과 출력
-
 #include <stdio.h>
 
 typedef struct point

@@ -1,5 +1,3 @@
-// 대소문자 변환
-
 #include <stdio.h>
 #include <ctype.h>
 
